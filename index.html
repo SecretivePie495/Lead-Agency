@@ -1,19 +1,149 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Glow Pros | Professional Holiday Light Installation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a936f',
+                        secondary: '#ffd166',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i data-feather="star" class="text-primary mr-2"></i>
+                <span class="text-xl font-bold text-primary">Holiday Glow Pros</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary transition">About</a>
+                <a href="#process" class="text-gray-700 hover:text-primary transition">Process</a>
+                <a href="#why-us" class="text-gray-700 hover:text-primary transition">Why Us</a>
+                <a href="#estimate" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition">Free Estimate</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full px-4 py-2 shadow-md" id="mobile-menu">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-primary">About</a>
+            <a href="#process" class="block py-2 text-gray-700 hover:text-primary">Process</a>
+            <a href="#why-us" class="block py-2 text-gray-700 hover:text-primary">Why Us</a>
+            <a href="#estimate" class="block bg-primary text-white px-4 py-2 rounded-lg my-2 text-center">Free Estimate</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-green-700 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Professional Holiday Light Installation for Your Home</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.</p>
+            <a href="#estimate" class="bg-secondary text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-opacity-90 transition inline-block">Request a Free Estimate</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="http://static.photos/holiday/1024x576/1" alt="Professional holiday light installation" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">No Ladders, No Tangled Lights, No Hassle</h2>
+                    <p class="text-lg text-gray-600 mb-6">Holiday Glow Pros handles everything from design to takedown, giving you a beautifully lit home without any of the work or risk.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">Custom designs tailored to your home's architecture</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">Professional installation with premium materials</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">In-season maintenance and post-holiday takedown</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How It Works</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Request Estimate</h3>
+                    <p class="text-gray-600">Online or by text - takes just 2 minutes</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Home Review</h3>
+                    <p class="text-gray-600">We assess your home via photos or in-person</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Professional Install</h3>
+                    <p class="text-gray-600">Our team handles everything with premium materials</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Support & Takedown</h3>
+                    <p class="text-gray-600">We maintain and remove everything post-season</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Homeowners Choose Us</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start">
+                    <div class="bg-secondary p-2 rounded-full mr-4">
+                        <i data-feather="shield" class="text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Professional & Insured</h3>
+                        <p class="text-gray-600">Our installers are trained, background-checked, and fully insured for your peace of mind.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-secondary p-2 rounded-full mr-4">
+                        <i data-feather="pen-tool" class="text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Designs</h3>
+                        <p class="text-gray-600">We
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
 </html>
