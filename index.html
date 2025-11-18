@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional holiday light installation services for homes and businesses. Stress-free holiday decorating with custom designs.">
     <title>Holiday Glow Pros | Professional Holiday Light Installation</title>
-
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script>
         tailwind.config = {
             theme: {
@@ -24,81 +26,101 @@
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
         }
     </script>
 </head>
-
 <body class="bg-light font-sans antialiased">
-
     <!-- Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Holiday Glow Pros</span>
+                <i data-feather="sparkles" class="text-primary w-6 h-6"></i>
+                <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Holiday Glow Pros
+                </span>
             </div>
-
             <div class="hidden lg:flex space-x-8 items-center">
                 <a href="#about" class="text-dark hover:text-primary transition-colors duration-300 font-medium">About</a>
                 <a href="#process" class="text-dark hover:text-primary transition-colors duration-300 font-medium">Process</a>
                 <a href="#why-us" class="text-dark hover:text-primary transition-colors duration-300 font-medium">Why Us</a>
-
-                <!-- Desktop Request Estimate Button -->
-                <a class="open-estimate-modal bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-primary/30 cursor-pointer">
+                <a href="#sms-terms" class="text-dark hover:text-primary transition-colors duration-300 font-medium">SMS Terms</a>
+                <a href="#estimate" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 font-medium shadow-lg hover:shadow-primary/30">
                     Free Estimate
                 </a>
             </div>
-
             <button class="lg:hidden focus:outline-none" id="mobile-menu-button" aria-label="Toggle menu">
-                <i class="w-8 h-8 text-dark">☰</i>
+                <i data-feather="menu" class="w-8 h-8 text-dark"></i>
             </button>
         </nav>
-
-        <!-- Mobile Menu -->
+        <!-- Mobile menu -->
         <div class="lg:hidden hidden bg-white w-full px-4 py-4 shadow-lg" id="mobile-menu">
             <div class="flex flex-col space-y-4">
                 <a href="#about" class="text-dark hover:text-primary transition-colors duration-300 py-2 border-b border-gray-100">About</a>
                 <a href="#process" class="text-dark hover:text-primary transition-colors duration-300 py-2 border-b border-gray-100">Process</a>
                 <a href="#why-us" class="text-dark hover:text-primary transition-colors duration-300 py-2 border-b border-gray-100">Why Us</a>
-
-                <!-- Mobile Request Estimate Button -->
-                <a class="open-estimate-modal bg-primary text-white px-4 py-3 rounded-full text-center hover:bg-opacity-90 transition-all duration-300 cursor-pointer">
+                <a href="#sms-terms" class="text-dark hover:text-primary transition-colors duration-300 py-2 border-b border-gray-100">SMS Terms</a>
+                <a href="#estimate" class="bg-primary text-white px-4 py-3 rounded-full text-center hover:bg-opacity-90 transition-all duration-300 mt-4">
                     Free Estimate
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="bg-gradient-to-r from-primary to-green-700 text-white py-20">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-green-700 text-white py-20" id="estimate">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Professional Holiday Light Installation for Your Home</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.</p>
-
-            <a class="open-estimate-modal bg-secondary text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-opacity-90 transition inline-block cursor-pointer">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Professional Holiday Light Installation for Your Home
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.
+            </p>
+            <a href="#estimate" class="bg-secondary text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-opacity-90 transition inline-block">
                 Request a Free Estimate
             </a>
         </div>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="http://static.photos/holiday/1024x576/1" class="rounded-lg shadow-lg w-full">
+                    <img src="http://static.photos/holiday/1024x576/1" alt="Professional holiday light installation" class="rounded-lg shadow-lg w-full">
                 </div>
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">No Ladders, No Tangled Lights, No Hassle</h2>
-                    <p class="text-lg text-gray-600 mb-6">Holiday Glow Pros handles everything from design to takedown.</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                        No Ladders, No Tangled Lights, No Hassle
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Holiday Glow Pros handles everything from design to takedown, giving you a beautifully lit home without any of the work or risk.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">Custom designs tailored to your home's architecture</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">Professional installation with premium, commercial-grade materials</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary mr-3 mt-1"></i>
+                            <p class="text-gray-700">In-season maintenance and post-holiday takedown included</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
+    <!-- How It Works Section -->
     <section id="process" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">How It Works</h2>
@@ -108,135 +130,206 @@
                         <span class="text-xl font-bold">1</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Request Estimate</h3>
-                    <p class="text-gray-600">Takes 2 minutes.</p>
+                    <p class="text-gray-600">Online or by text — takes just 2 minutes.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-xl font-bold">2</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Home Review</h3>
-                    <p class="text-gray-600">Send photos or schedule a visit.</p>
+                    <p class="text-gray-600">We assess your home via photos or an in-person visit.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-xl font-bold">3</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Professional Install</h3>
-                    <p class="text-gray-600">Fast & safe installation.</p>
+                    <p class="text-gray-600">Our team installs everything safely with premium materials.</p>
                 </div>
-
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-xl font-bold">4</span>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Support & Takedown</h3>
-                    <p class="text-gray-600">We remove lights after the season.</p>
+                    <p class="text-gray-600">We maintain your lights and remove them after the season.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us -->
+    <!-- Why Choose Us Section -->
     <section id="why-us" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Homeowners Choose Us</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start">
+                    <div class="bg-secondary p-2 rounded-full mr-4">
+                        <i data-feather="shield" class="text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Professional & Insured</h3>
+                        <p class="text-gray-600">
+                            Our installers are trained, background-checked, and fully insured for your peace of mind.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-secondary p-2 rounded-full mr-4">
+                        <i data-feather="pen-tool" class="text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Designs</h3>
+                        <p class="text-gray-600">
+                            We create designs that match your home's style, from classic warm white to full-color displays.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-secondary p-2 rounded-full mr-4">
+                        <i data-feather="clock" class="text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Done For You</h3>
+                        <p class="text-gray-600">
+                            From design to takedown, we handle everything so you can enjoy the holidays without the hassle.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 🌟 POPUP MODAL FORM -->
-    <div id="estimate-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-[999] hidden">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 relative">
+    <!-- SMS Terms & Conditions Section -->
+    <section id="sms-terms" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">SMS Terms &amp; Conditions</h2>
+            <p class="text-sm text-gray-500 mb-6">Last updated: November 18, 2025</p>
 
-            <button id="close-estimate-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl">
-                ✕
-            </button>
+            <p class="text-gray-700 mb-4">
+                These SMS Terms &amp; Conditions (“Terms”) govern the SMS/text message program (“SMS Program”) provided by
+                <span class="font-semibold">Holiday Glow Pros</span> (“we,” “us,” or “our”). By providing your mobile number and 
+                opting in to receive text messages from us, you agree to these Terms and our SMS Privacy Policy.
+            </p>
 
-            <div class="p-6 md:p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Free Estimate</h2>
-                <p class="text-sm text-gray-500 mb-6">Enter your details and we’ll contact you shortly.</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">1. Program Description</h3>
+            <p class="text-gray-700 mb-3">
+                We may use SMS/text messages to communicate with you about:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                <li>Free estimate confirmations and follow-ups</li>
+                <li>Appointment reminders and scheduling updates</li>
+                <li>Installation arrival windows and service updates</li>
+                <li>Post-installation support and takedown reminders</li>
+                <li>Occasional promotions, seasonal offers, and holiday lighting specials</li>
+            </ul>
 
-                <form id="estimate-form" class="space-y-4">
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">2. Opt-In</h3>
+            <p class="text-gray-700 mb-4">
+                By entering your phone number on our website, clicking “Request a Free Estimate,” submitting a contact form,
+                or otherwise requesting that we contact you via text message, you provide express consent to receive SMS/text
+                messages from us at the number you provided. Consent is not a condition of purchase.
+            </p>
 
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Name</label>
-                        <input type="text" id="name" required
-                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-primary focus:border-primary">
-                    </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">3. Message Frequency</h3>
+            <p class="text-gray-700 mb-4">
+                Message frequency will vary based on your level of engagement and the services you request. You may receive
+                multiple messages when scheduling, confirming, or updating service appointments, along with occasional
+                promotional or seasonal messages.
+            </p>
 
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Phone Number</label>
-                        <input type="tel" id="phone" required
-                               placeholder="(555) 555-5555"
-                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-primary focus:border-primary">
-                    </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">4. Opt-Out Instructions</h3>
+            <p class="text-gray-700 mb-3">
+                You can opt out of receiving SMS/text messages from us at any time:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                <li>Reply <span class="font-semibold">STOP</span> to any text message we send to unsubscribe.</li>
+                <li>Reply <span class="font-semibold">HELP</span> for help or more information.</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+                After you send “STOP,” you may receive one final message confirming that you have been unsubscribed. You will
+                not receive further SMS messages from us unless you opt in again.
+            </p>
 
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Address</label>
-                        <input type="text" id="address" required placeholder="Street, City, ZIP"
-                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-primary focus:border-primary">
-                    </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">5. Help &amp; Support</h3>
+            <p class="text-gray-700 mb-4">
+                If you need help with our SMS Program, reply <span class="font-semibold">HELP</span> to any message or contact us at:
+            </p>
+            <p class="text-gray-700 mb-4">
+                Email: <a href="mailto:info@holidayglowpros.com" class="text-primary underline">info@holidayglowpros.com</a><br>
+                Phone: <span class="font-mono">(512) 555-0192</span>
+            </p>
 
-                    <button type="submit"
-                            class="w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-opacity-90 transition">
-                        Submit Request
-                    </button>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">6. Carrier Disclaimer</h3>
+            <p class="text-gray-700 mb-4">
+                Message and data rates may apply. Message frequency may vary. Mobile carriers are not liable for delayed or
+                undelivered messages. Delivery of messages is subject to effective transmission from your wireless service
+                provider and is outside our control.
+            </p>
 
-                    <p class="text-[11px] text-gray-400 mt-2">
-                        By submitting, you agree we may contact you for your estimate.  
-                        If you're not interested, just let us know.
-                    </p>
-                </form>
-            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">7. Your Responsibilities</h3>
+            <p class="text-gray-700 mb-3">
+                You agree that:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                <li>You are the owner or regular user of the phone number you provide.</li>
+                <li>You will promptly notify us if you change or deactivate your number.</li>
+                <li>You are responsible for any charges or fees imposed by your mobile carrier in connection with SMS messages.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">8. Privacy</h3>
+            <p class="text-gray-700 mb-4">
+                We respect your privacy and use your information in connection with our SMS Program as described in our
+                SMS Privacy Policy and overall website privacy practices. We do not sell or rent your mobile number.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">9. Changes to These Terms</h3>
+            <p class="text-gray-700 mb-4">
+                We may update or modify these SMS Terms &amp; Conditions from time to time. Any changes will be posted on this
+                page with an updated “Last updated” date. Your continued participation in our SMS Program after any changes
+                indicates your acceptance of the updated Terms.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">10. Contact Us</h3>
+            <p class="text-gray-700 mb-2">
+                If you have any questions about these SMS Terms &amp; Conditions, please contact us:
+            </p>
+            <p class="text-gray-700">
+                Holiday Glow Pros<br>
+                Email: <a href="mailto:info@holidayglowpros.com" class="text-primary underline">info@holidayglowpros.com</a><br>
+                Phone: <span class="font-mono">(512) 555-0192</span><br>
+                Website: <a href="https://holidayglowpros.com" class="text-primary underline">https://holidayglowpros.com</a>
+            </p>
         </div>
-    </div>
+    </section>
 
-    <!-- JavaScript -->
+    <!-- Optional footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; <span id="year"></span> Holiday Glow Pros. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        // Mobile Menu Toggle
-        const mobileButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
+        // Feather icons
+        feather.replace();
 
-        if (mobileButton) {
-            mobileButton.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
+        // Mobile menu toggle
+        const mobileButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileButton && mobileMenu) {
+            mobileButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
         }
 
-        // Modal Logic
-        const modal = document.getElementById("estimate-modal");
-        const openButtons = document.querySelectorAll(".open-estimate-modal");
-        const closeButton = document.getElementById("close-estimate-modal");
-
-        openButtons.forEach(btn => {
-            btn.addEventListener("click", (e) => {
-                e.preventDefault();
-                modal.classList.remove("hidden");
-            });
-        });
-
-        closeButton.addEventListener("click", () => {
-            modal.classList.add("hidden");
-        });
-
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) modal.classList.add("hidden");
-        });
-
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") modal.classList.add("hidden");
-        });
-
-        // Form Submission (placeholder)
-        document.getElementById("estimate-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            alert("Thanks! We’ve received your estimate request.");
-            modal.classList.add("hidden");
-            this.reset();
-        });
+        // Set current year in footer
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
     </script>
 
+    <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
 </html>
-
