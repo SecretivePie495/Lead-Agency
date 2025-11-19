@@ -36,6 +36,7 @@
     </script>
 </head>
 <body class="bg-light font-sans antialiased">
+
     <!-- Navigation -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -58,6 +59,7 @@
                 <i data-feather="menu" class="w-8 h-8 text-dark"></i>
             </button>
         </nav>
+
         <!-- Mobile menu -->
         <div class="lg:hidden hidden bg-white w-full px-4 py-4 shadow-lg" id="mobile-menu">
             <div class="flex flex-col space-y-4">
@@ -72,15 +74,93 @@
         </div>
     </header>
 
-   <!-- Hero / Estimate Section (UPDATED) -->
-<section class="bg-gradient-to-r from-primary to-green-700 text-white py-20" id="estimate">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">
-            Professional Holiday Light Installation for Your Home
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-black">
-            We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.
-        </p>
+    <!-- Hero / Estimate Section -->
+    <section class="bg-gradient-to-r from-primary to-green-700 text-white py-20" id="estimate">
+        <div class="container mx-auto px-4 text-center">
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Professional Holiday Light Installation for Your Home
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-black">
+                We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.
+            </p>
+
+            <!-- Estimate Form -->
+            <div class="max-w-xl mx-auto bg-white text-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-900">Request a Free Estimate</h2>
+
+                <p class="text-sm text-gray-600 mb-6">
+                    Share a few details and we’ll follow up with a quick estimate and scheduling options.
+                </p>
+
+                <form class="space-y-4">
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" required
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                            placeholder="Jane Doe">
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mobile Phone</label>
+                        <input type="tel" required
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                            placeholder="(555) 123-4567">
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Service Address</label>
+                        <input type="text"
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                            placeholder="Street address, city, ZIP">
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">What are you interested in?</label>
+                        <textarea rows="3"
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                            placeholder="Example: lights around roofline and front trees."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-secondary text-gray-900 font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition shadow-md">
+                        Request a Free Estimate
+                    </button>
+                </form>
+
+                <!-- **UPDATED CTA WITH PRIVACY POLICY LINK** -->
+                <p class="mt-4 text-[11px] leading-relaxed text-gray-600 text-left">
+                    By submitting this form, you agree to receive SMS messages from Holiday Glow Pros related to your estimate,
+                    scheduling, and service updates. Message frequency varies. Message &amp; data rates may apply.
+                    Reply <span class="font-semibold">STOP</span> to opt out, <span class="font-semibold">HELP</span> for help.
+                    See our
+                    <a href="privacy.html" class="text-primary underline">Privacy Policy</a>
+                    and
+                    <a href="#sms-terms" class="text-primary underline">SMS Terms &amp; Conditions</a>.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- (Rest of your site stays the same — omitted for shortness, but full version can be provided!) -->
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; <span id="year"></span> Holiday Glow Pros. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        const mobileButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
 
         <!-- Simple estimate request form with compliant CTA -->
         <div class="max-w-xl mx-auto bg-white text-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
