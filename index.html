@@ -72,7 +72,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero / Estimate Section (UPDATED) -->
     <section class="bg-gradient-to-r from-primary to-green-700 text-white py-20" id="estimate">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">
@@ -81,9 +81,55 @@
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 We design, install, and remove custom holiday lights so you get the holiday magic without climbing a ladder.
             </p>
-            <a href="#estimate" class="bg-secondary text-gray-900 font-bold px-8 py-4 rounded-lg text-lg hover:bg-opacity-90 transition inline-block">
-                Request a Free Estimate
-            </a>
+
+            <!-- Simple estimate request form with compliant CTA -->
+            <div class="max-w-xl mx-auto bg-white text-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-900">Request a Free Estimate</h2>
+                <p class="text-sm text-gray-600 mb-6">
+                    Share a few details and we’ll follow up with a quick estimate and scheduling options.
+                </p>
+                <form class="space-y-4">
+                    <div class="text-left">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input id="name" name="name" type="text" required
+                               class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                               placeholder="Jane Doe">
+                    </div>
+                    <div class="text-left">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Mobile Phone</label>
+                        <input id="phone" name="phone" type="tel" required
+                               class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                               placeholder="(555) 123-4567">
+                    </div>
+                    <div class="text-left">
+                        <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Service Address</label>
+                        <input id="address" name="address" type="text"
+                               class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                               placeholder="Street address, city, ZIP">
+                    </div>
+                    <div class="text-left">
+                        <label for="details" class="block text-sm font-medium text-gray-700 mb-1">What are you interested in?</label>
+                        <textarea id="details" name="details" rows="3"
+                                  class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                                  placeholder="Example: lights around roofline and front trees."></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-secondary text-gray-900 font-bold px-6 py-3 rounded-lg text-base hover:bg-opacity-90 transition shadow-md">
+                        Request a Free Estimate
+                    </button>
+                </form>
+
+                <!-- COMPLIANT CTA / DISCLOSURE TEXT -->
+                <p class="mt-4 text-[11px] leading-relaxed text-gray-600 text-left">
+                    By submitting this form, you agree to receive SMS messages from Holiday Glow Pros related to your estimate,
+                    scheduling, and service updates. Message frequency varies. Message &amp; data rates may apply.
+                    Reply <span class="font-semibold">STOP</span> to opt out, <span class="font-semibold">HELP</span> for help.
+                    See our
+                    <a href="#sms-terms" class="text-primary underline">SMS Terms &amp; Conditions</a>
+                    and
+                    <a href="#sms-terms" class="text-primary underline">Privacy Policy</a>.
+                </p>
+            </div>
         </div>
     </section>
 
