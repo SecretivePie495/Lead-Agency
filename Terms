@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms & Conditions for Holiday Glow Pros">
+    <title>Terms & Conditions | Holiday Glow Pros</title>
+
+    <!-- Fonts & Tailwind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a936f',
+                        secondary: '#ffd166',
+                        accent: '#e63946',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-light font-sans antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i data-feather="sparkles" class="text-primary w-6 h-6"></i>
+                <span class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Holiday Glow Pros
+                </span>
+            </a>
+            <div class="hidden lg:flex space-x-8 items-center">
+                <a href="index.html#about" class="text-dark hover:text-primary transition-colors font-medium">About</a>
+                <a href="index.html#process" class="text-dark hover:text-primary transition-colors font-medium">Process</a>
+                <a href="index.html#why-us" class="text-dark hover:text-primary transition-colors font-medium">Why Us</a>
+                <a href="privacy.html" class="text-dark hover:text-primary transition-colors font-medium">Privacy</a>
+                <a href="terms.html" class="text-dark hover:text-primary transition-colors font-medium">Terms</a>
+                <a href="index.html#estimate" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition font-medium shadow-lg">
+                    Free Estimate
+                </a>
+            </div>
+
+            <button class="lg:hidden focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu" class="w-8 h-8 text-dark"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden bg-white w-full px-4 py-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html#about" class="py-2 border-b border-gray-100 text-dark hover:text-primary">About</a>
+                <a href="index.html#process" class="py-2 border-b border-gray-100 text-dark hover:text-primary">Process</a>
+                <a href="index.html#why-us" class="py-2 border-b border-gray-100 text-dark hover:text-primary">Why Us</a>
+                <a href="privacy.html" class="py-2 border-b border-gray-100 text-dark hover:text-primary">Privacy</a>
+                <a href="terms.html" class="py-2 border-b border-gray-100 text-dark hover:text-primary">Terms</a>
+                <a href="index.html#estimate" class="bg-primary text-white px-4 py-3 rounded-full text-center hover:bg-opacity-90 mt-4">Free Estimate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Terms Page -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6">Terms & Conditions</h1>
+            <p class="text-sm text-gray-500 mb-8">Last updated: November 2025</p>
+
+            <p class="text-gray-700 mb-6">
+                These Terms & Conditions (“Terms”) govern your use of the Holiday Glow Pros website, services,
+                communication (including SMS), and any related interactions with our company. By accessing our site or 
+                requesting services, you agree to these Terms.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">1. Services Provided</h2>
+            <p class="text-gray-700 mb-4">
+                Holiday Glow Pros offers seasonal holiday lighting services including installation, maintenance, and removal. 
+                Estimates are provided based on property conditions and may require additional details or in-person review.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">2. Estimates & Appointments</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+                <li>Estimates are non-binding until confirmed by both parties.</li>
+                <li>Appointment times are approximate and may vary due to weather and scheduling conditions.</li>
+                <li>Customer must ensure safe and unobstructed access to the work area.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">3. Payments</h2>
+            <p class="text-gray-700 mb-6">
+                Payment terms will be communicated at the time of service. Deposits may be required for certain projects.
+                Failure to pay may result in cancellation or postponement of service.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">4. SMS/Text Message Program</h2>
+            <p class="text-gray-700 mb-4">
+                By providing your mobile number, you agree to receive SMS updates related to:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+                <li>Estimate confirmations and follow-ups</li>
+                <li>Technician arrival alerts</li>
+                <li>Scheduling updates</li>
+                <li>Service reminders</li>
+                <li>Seasonal announcements (optional)</li>
+            </ul>
+            <p class="text-gray-700 mb-6">
+                Message frequency varies. Reply <span class="font-semibold">STOP</span> to opt out or 
+                <span class="font-semibold">HELP</span> for assistance. Message &amp; data rates may apply.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">5. Customer Responsibilities</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+                <li>You must provide accurate contact and property information.</li>
+                <li>You agree not to misuse our website, forms, or communication channels.</li>
+                <li>You are responsible for maintaining safety around installed lighting.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">6. Limitation of Liability</h2>
+            <p class="text-gray-700 mb-6">
+                Holiday Glow Pros is not liable for delays caused by weather, supply issues, property obstructions, or 
+                customer inaction. We are not responsible for damage caused by improper customer handling of installed lighting.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">7. Website Use</h2>
+            <p class="text-gray-700 mb-6">
+                All content on this website—including text, images, and branding—is the property of Holiday Glow Pros and 
+                may not be copied or reproduced without written permission.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">8. Changes to These Terms</h2>
+            <p class="text-gray-700 mb-6">
+                We may update these Terms periodically. Continued use of our website or services after changes are made 
+                indicates acceptance of the updated Terms.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-3">9. Contact Information</h2>
+            <p class="text-gray-700">
+                Holiday Glow Pros<br>
+                Email: <a href="mailto:info@holidayglowpros.com" class="text-primary underline">info@holidayglowpros.com</a><br>
+                Phone: <span class="font-mono">(512) 555-0192</span><br>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; <span id="year"></span> Holiday Glow Pros. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
