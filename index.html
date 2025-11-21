@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UdoXLaith | Done-For-You Lead Nurturing Agency</title>
+    <title>UTGXLaith | Done-For-You Lead Agency</title>
     <link rel="icon" type="image/png" href="images/Favicon2.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss .com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -203,6 +203,7 @@
             box-shadow: 0 10px 25px rgba(164, 255, 99, 0.15);
         }
         
+        /* Responsive typography */
         @media (max-width: 640px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -212,6 +213,7 @@
             }
         }
         
+        /* Primary underline effect */
         .primary-underline {
             position: relative;
             display: inline-block;
@@ -234,6 +236,7 @@
             transform: scaleX(1);
         }
         
+        /* Improved button styles */
         .btn-primary {
             background-color: var(--primary);
             color: var(--dark);
@@ -297,6 +300,7 @@
             width: 100%;
         }
         
+        /* Scrollbar styling */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -310,6 +314,7 @@
             border-radius: 4px;
         }
         
+        /* Input field styling */
         .input-field {
             background-color: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(164, 255, 99, 0.2);
@@ -321,9 +326,1311 @@
             box-shadow: 0 0 0 3px rgba(164, 255, 99, 0.2);
         }
         
+        /* Sparkle effect */
         .sparkle {
             position: absolute;
             width: 4px;
             height: 4px;
             background-color: var(--primary);
-            border
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+        }
+        
+        /* Responsive grid adjustments */
+        @media (max-width: 1024px) {
+            .feature-columns {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .feature-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* Wave divider */
+        .wave-divider {
+            position: relative;
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .wave-divider svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Glowing stats */
+        .stat-card {
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid rgba(164, 255, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: rgba(164, 255, 99, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        /* Gradient border for cards */
+        .gradient-border {
+            position: relative;
+            background: var(--dark);
+        }
+        
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, var(--primary), #0066FF);
+            z-index: -1;
+            border-radius: inherit;
+        }
+        
+        /* Animated gradient text */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #A4FF63, #0066FF, #A4FF63);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 6s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Leaderboard styling */
+        .leaderboard-item:nth-child(1) .rank {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: black;
+        }
+        
+        .leaderboard-item:nth-child(2) .rank {
+            background: linear-gradient(135deg, #C0C0C0, #A0A0A0);
+            color: black;
+        }
+        
+        .leaderboard-item:nth-child(3) .rank {
+            background: linear-gradient(135deg, #CD7F32, #A66D2C);
+            color: black;
+        }
+        /* AI Tool Interface */
+        .ai-tool-container {
+            background: linear-gradient(135deg, #131313 0%, #0A0A0A 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .ai-tool-header {
+            background: rgba(20, 20, 20, 0.8);
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(164, 255, 99, 0.1);
+        }
+        .ai-tool-content {
+            padding: 20px;
+            min-height: 300px;
+        }
+        .ai-message {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--primary);
+        }
+        .ai-loading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+        }
+        .ai-loading-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        .ai-loading-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .ai-loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .ai-loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .ai-tool-input {
+            position: relative;
+            margin-top: 16px;
+        }
+        .ai-tool-input input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(30, 30, 30, 0.7);
+            border: 1px solid rgba(164, 255, 99, 0.2);
+            border-radius: 8px;
+            color: white;
+            outline: none;
+        }
+        .ai-tool-input button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        /* Responsive AI tool positioning */
+        @media (max-width: 1024px) {
+            .hero-ai-tool {
+                margin-top: 40px;
+                margin-bottom: 60px;
+            }
+            .ai-tool-floating-card {
+                right: 10px;
+                bottom: -50px;
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-ai-tool {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        /* Responsive testimonial card */
+        @media (max-width: 640px) {
+            .testimonial-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="grid-pattern">
+    <!-- Animated background elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="animated-blob w-96 h-96 bg-primary -left-20 -top-20 opacity-10" style="animation-delay: 0s;"></div>
+        <div class="animated-blob w-80 h-80 bg-purple-500 top-1/4 -right-40 opacity-10" style="animation-delay: 2s;"></div>
+        <div class="animated-blob w-96 h-96 bg-teal-500 bottom-0 left-1/2 opacity-10" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-black/70 backdrop-blur-md border-b border-gray-800 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center">
+                        <img src="https://imagedelivery.net/LtCN8b7XAtToQgo5calb3g/5282c62f-e522-4507-9956-07b063b49201/website" alt="UdoXLaith Logo" class="h-10 mr-3">
+                        <span class="text-2xl font-bold gradient-text">UdoXLaith</span>
+                    </div>
+                    <div class="hidden md:flex gap-6">
+                        <a href="#how-it-works" class="font-medium text-gray-300 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>How It Works</span>
+                        </a>
+                        <a href="#ai-power" class="font-medium text-gray-300 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Lead Quality</span>
+                        </a>
+                        <a href="#features" class="font-medium text-gray-300 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Features</span>
+                        </a>
+                        <a href="#community" class="font-medium text-gray-300 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Industries</span>
+                        </a>
+                        <a href="#pricing" class="font-medium text-gray-300 hover:text-primary transition-colors flex items-center primary-underline">
+                            <span>Pricing</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="hidden md:flex items-center gap-2 px-6 py-2 rounded-full font-medium text-white/80 hover:text-primary transition-colors btn-secondary">
+                        Client Login
+                    </button>
+                    <button class="btn-primary px-6 py-3 rounded-full flex items-center gap-2 glow-box pulse">
+                        <i class="fas fa-bolt"></i>
+                        <span>Book a Call</span>
+                    </button>
+                    <button class="md:hidden text-gray-300 hover:text-primary" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-black/90 backdrop-blur-lg border-t border-gray-800" id="mobile-menu">
+            <div class="px-4 py-3 space-y-4">
+                <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-primary hover:bg-gray-900">
+                    How It Works
+                </a>
+                <a href="#ai-power" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-primary hover:bg-gray-900">
+                    Lead Quality
+                </a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-primary hover:bg-gray-900">
+                    Features
+                </a>
+                <a href="#categories" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-primary hover:bg-gray-900">
+                    Industries
+                </a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-primary hover:bg-gray-900">
+                    Pricing
+                </a>
+                <div class="pt-4 border-t border-gray-800">
+                    <button class="w-full btn-secondary px-4 py-2 rounded-md text-base font-medium">
+                        Client Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-8 xl:gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-black/20 border border-gray-800 rounded-full px-4 py-1.5 w-max mb-6 glow-box">
+                        <span class="text-primary text-sm font-medium">YOUR DONE-FOR-YOU LEAD AGENCY</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold hero-title mb-6">
+                        <span class="gradient-text">We Bring You</span> <span class="typewriter"></span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl">
+                        Businesses come to us when they need a steady flow of qualified leads. We deliver ready-to-talk prospects so you can focus on serving customers and closing deals.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button class="btn-primary px-8 py-4 rounded-full text-lg flex items-center justify-center gap-2">
+                            <i class="fas fa-calendar-check"></i>
+                            Book a Discovery Call
+                        </button>
+                        <button class="btn-secondary px-8 py-4 rounded-full text-lg flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-volume"></i>
+                            See Lead Examples
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <div class="flex -space-x-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-12 h-12 rounded-full border-2 border-black" alt="">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full border-2 border-black" alt="">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-12 h-12 rounded-full border-2 border-black" alt="">
+                            <div class="w-12 h-12 rounded-full border-2 border-black bg-gray-900 flex items-center justify-center">
+                                <span class="text-xs font-bold text-primary">150+</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">Trusted by 150+ growing businesses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative hero-ai-tool">
+                    <div class="relative floating">
+                        <div class="gradient-box rounded-xl w-full max-w-xl mx-auto primary-border tilt-effect p-2">
+                            <!-- Lead Dashboard Style Interface -->
+                            <div class="ai-tool-container">
+                                <div class="ai-tool-header flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                                        <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                                        <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                                    </div>
+                                    <h3 class="text-xs font-medium text-gray-400">UdoXLaith – Pipeline Snapshot</h3>
+                                    <div class="w-20"></div>
+                                </div>
+                                <div class="ai-tool-content">
+                                    <div class="ai-message">
+                                        <h4 class="font-bold text-primary mb-1">📈 New Leads This Week</h4>
+                                        <p class="text-sm text-gray-300">
+                                            Your campaigns are generating a steady flow of interest. So far this week:
+                                        </p>
+                                        <div class="mt-3 grid grid-cols-3 gap-3 text-xs">
+                                            <div class="bg-black/40 rounded-lg p-2 text-center">
+                                                <div class="text-2xl font-bold text-primary">37</div>
+                                                <div class="text-gray-400">New Leads</div>
+                                            </div>
+                                            <div class="bg-black/40 rounded-lg p-2 text-center">
+                                                <div class="text-2xl font-bold text-primary">19</div>
+                                                <div class="text-gray-400">Booked Calls</div>
+                                            </div>
+                                            <div class="bg-black/40 rounded-lg p-2 text-center">
+                                                <div class="text-2xl font-bold text-primary">72%</div>
+                                                <div class="text-gray-400">Show-Up Rate</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="ai-message">
+                                        <h4 class="font-bold text-primary mb-1">🎯 Lead Quality Overview</h4>
+                                        <p class="text-sm text-gray-300">
+                                            We focus on real buyers who are actively looking for what you offer – not random clicks.
+                                        </p>
+                                        <div class="mt-3 flex items-center gap-2">
+                                            <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">High-Intent</span>
+                                            <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Exclusive to You</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="ai-message">
+                                        <h4 class="font-bold text-primary mb-1">💡 Quick Insight</h4>
+                                        <p class="text-sm text-gray-300">
+                                            Most of your best leads this week came from repeat-style campaigns and follow-up – we keep nurturing so you don’t have to.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="ai-loading">
+                                        <span class="text-xs">Reviewing today’s lead flow...</span>
+                                        <div class="ai-loading-dot"></div>
+                                        <div class="ai-loading-dot"></div>
+                                        <div class="ai-loading-dot"></div>
+                                    </div>
+                                </div>
+                                <div class="ai-tool-input p-4 bg-gray-900/50">
+                                    <input type="text" placeholder="Ask: How many leads can you send my business?" class="w-full">
+                                    <button>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-gray-900 p-6 rounded-2xl shadow-2xl border border-gray-800 w-3/4 z-10 primary-border ai-tool-floating-card">
+                            <div class="ai-chip">LIVE LEAD ALERT</div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-primary border border-gray-700">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs font-medium text-primary">NEW QUALIFIED LEAD</div>
+                                    <h4 class="font-bold">Homeowner – Roof Inspection</h4>
+                                </div>
+                                <div class="px-2 py-1 bg-primary/10 text-primary text-xs font-bold rounded">Hot</div>
+                            </div>
+                            <div class="flex justify-between items-center mt-4 text-xs">
+                                <div class="flex flex-col">
+                                    <span class="text-gray-400">Sent to:</span>
+                                    <span class="text-white font-medium">Your CRM / Phone / Email</span>
+                                </div>
+                                <button class="text-xs btn-primary rounded-full font-bold">
+                                    <i class="fas fa-eye mr-1"></i>
+                                    View Lead
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Marquee -->
+    <div class="py-8 bg-black/30 border-y border-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 gradient-mask z-10"></div>
+        <div class="scrolling-text whitespace-nowrap text-gray-500 text-sm font-medium w-max flex gap-16">
+            <span class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Trusted by local & online businesses</span>
+            <span>•</span>
+            <span>Thousands of leads generated</span>
+            <span>•</span>
+            <span>High-intent, real prospects</span>
+            <span>•</span>
+            <span>5-star client satisfaction</span>
+            <span>•</span>
+            <span>Done-for-you lead generation</span>
+            <span>•</span>
+            <span>Focus on closing, not chasing</span>
+            <span>•</span>
+            <span>Simple, transparent partnership</span>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    WHY PARTNER WITH US
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    The Simple Way to <span class="gradient-text">Get More Customers</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We’re a lead agency. You tell us who you want to work with, we bring those people to you – without you worrying about the marketing behind it.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 text-primary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Qualified Leads Only</h3>
+                    <p class="text-gray-400">
+                        We focus on people who actually want what you offer – not random clicks or cold lists.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 text-primary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Save Your Time</h3>
+                    <p class="text-gray-400">
+                        We handle the outreach and follow-up side so your team can spend their time closing and serving clients.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 text-primary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Predictable Pipeline</h3>
+                    <p class="text-gray-400">
+                        We aim to bring you a consistent, predictable flow of new opportunities each month.
+                    </p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card tilt-effect">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 text-primary text-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Simple Partnership</h3>
+                    <p class="text-gray-400">
+                        No tech headaches or complicated dashboards. We keep things simple and business-owner friendly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    SIMPLE PROCESS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Working With Us in <span class="gradient-text">3 Steps</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    No jargon, no complexity. Just a clear way to get more leads for your business.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-black to-gray-900 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-800 shadow-inner-custom">
+                                1
+                            </div>
+                            <div class="ai-chip">DISCOVERY</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Tell Us Who You Want</h3>
+                        <p class="text-gray-300">
+                            We learn about your business, ideal customers, and how many leads you want each month.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-black to-gray-900 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-800 shadow-inner-custom">
+                                2
+                            </div>
+                            <div class="ai-chip">SETUP</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">We Set Up Your Lead Flow</h3>
+                        <p class="text-gray-300">
+                            We handle the behind-the-scenes work to start generating and sending leads directly to you.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="gradient-box p-8 rounded-2xl primary-border feature-card tilt-effect animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-br from-black to-gray-900 rounded-full flex items-center justify-center text-primary text-3xl font-bold mb-6 border border-gray-800 shadow-inner-custom">
+                                3
+                            </div>
+                            <div class="ai-chip">GROWTH</div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">You Get Leads & Close Deals</h3>
+                        <p class="text-gray-300">
+                            We keep feeding your pipeline, and you focus on answering, booking, and closing new customers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg glow-box">
+                    <i class="fas fa-play-circle mr-2"></i>
+                    Watch Quick Overview
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section (formerly Popular Trades) -->
+    <section id="categories" class="py-24 px-4 sm:px-6 lg:px-8 bg-black/20 relative overflow-hidden">
+        <div class="hexagon-bg absolute inset-0 opacity-10"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    INDUSTRIES WE SERVE
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Where Our <span class="gradient-text">Leads Perform</span> Best
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We generate leads for service businesses that need real customers reaching out, not just website visitors.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span class="font-medium text-center">Home Services</span>
+                    <span class="text-xs text-primary mt-1">Roofing, gutters, lights & more</span>
+                </div>
+                
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <span class="font-medium text-center">Med Spa & Beauty</span>
+                    <span class="text-xs text-primary mt-1">Consults & treatment leads</span>
+                </div>
+                
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <span class="font-medium text-center">Dental & Ortho</span>
+                    <span class="text-xs text-primary mt-1">High-value patient leads</span>
+                </div>
+
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <span class="font-medium text-center">B2B Services</span>
+                    <span class="text-xs text-primary mt-1">Booked appointments</span>
+                </div>
+
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <span class="font-medium text-center">Real Estate</span>
+                    <span class="text-xs text-primary mt-1">Buyer & seller interest</span>
+                </div>
+
+                <div class="group aspect-square bg-gray-900/70 rounded-xl p-6 flex flex-col justify-center items-center border border-gray-800 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-black flex items-center justify-center text-primary text-2xl mb-4 group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <span class="font-medium text-center">Other Services</span>
+                    <span class="text-xs text-primary mt-1">Ask if we can support you</span>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="btn-secondary px-8 py-4 rounded-full text-lg">
+                    <i class="fas fa-search mr-2"></i>
+                    Check If We Serve Your Industry
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="stories" class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900 relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    CLIENT RESULTS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    How We Help <span class="gradient-text">Businesses Grow</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Real stories from business owners who partnered with us to get more customers without adding more to their plate.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="gradient-box p-8 rounded-2xl relative overflow-hidden testimonial-card">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-primary/10 blur-2xl"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-primary/30">
+                        <div>
+                            <h4 class="font-bold text-white">Sarah K.</h4>
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="text-primary text-sm">Med Spa Owner</span>
+                                <span class="text-primary">•</span>
+                                <span class="text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    4.9
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "We used to rely on random referrals. After working with UdoXLaith, we have booked consults coming in every week without me touching the marketing."
+                    </p>
+                    <div class="relative">
+                        <div class="bg-black/30 rounded-lg p-4 border border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">40+ Consult Requests / Month</h4>
+                                    <div class="flex items-center gap-1 mt-1">
+                                        <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Consistent new patients</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="gradient-box p-8 rounded-2xl relative overflow-hidden testimonial-card">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-primary/10 blur-2xl"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-primary/30">
+                        <div>
+                            <h4 class="font-bold text-white">David T.</h4>
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="text-primary text-sm">Roofing Contractor</span>
+                                <span class="text-primary">•</span>
+                                <span class="text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    5.0
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "They send us homeowners actually asking for inspections and quotes. My team just answers the phone and closes the work."
+                    </p>
+                    <div class="relative">
+                        <div class="bg-black/30 rounded-lg p-4 border border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Booked Jobs Every Week</h4>
+                                    <div class="flex items-center gap-1 mt-1">
+                                        <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Higher close rate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 3 -->
+                <div class="gradient-box p-8 rounded-2xl relative overflow-hidden testimonial-card">
+                    <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-primary/10 blur-2xl"></div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-16 h-16 rounded-full object-cover border-2 border-primary/30">
+                        <div>
+                            <h4 class="font-bold text-white">Maya P.</h4>
+                            <div class="flex items-center gap-1 mt-1">
+                                <span class="text-primary text-sm">Agency Owner</span>
+                                <span class="text-primary">•</span>
+                                <span class="text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i>
+                                    4.8
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Instead of hunting for clients every month, I have a pipeline I can actually see and plan around now."
+                    </p>
+                    <div class="relative">
+                        <div class="bg-black/30 rounded-lg p-4 border border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Predictable Retainers</h4>
+                                    <div class="flex items-center gap-1 mt-1">
+                                        <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">More stable revenue</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- “Lead Quality” / AI Power Section -->
+    <section id="ai-power" class="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-black/20">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    LEAD QUALITY MATTERS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    How We Keep <span class="gradient-text">Lead Quality High</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    You don’t need to know how everything works in the background. What matters is that the people we send you are real, interested, and ready to talk.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-white mb-6">We Filter Out the Noise</h3>
+                    <p class="text-gray-300 mb-6">
+                        Our focus is simple: send you leads that make sense for your business. We use a mix of data, automation, and common sense to filter out junk and time-wasters.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Real people who have shown interest in your service</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Leads aligned with your location and service area</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Focused on the type of jobs or clients you actually want</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Ongoing tweaks as we learn what converts best for you</span>
+                        </li>
+                    </ul>
+                    <button class="btn-primary px-6 py-3 rounded-full">
+                        Talk About Lead Quality
+                    </button>
+                </div>
+                <div class="gradient-box rounded-xl p-1 primary-border tilt-effect">
+                    <div class="bg-black/20 rounded-lg p-8 aspect-video flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-primary/10 text-primary text-3xl flex items-center justify-center mb-6">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h4 class="font-bold text-2xl text-white mb-2">Lead Flow Overview</h4>
+                            <p class="text-gray-300 mb-4">From interest → lead → booked call → new customer.</p>
+                            <div class="flex gap-2 justify-center text-xs">
+                                <div class="px-3 py-1 rounded-full bg-primary/10 text-primary">High Intent</div>
+                                <div class="px-3 py-1 rounded-full bg-primary/10 text-primary">Exclusive</div>
+                                <div class="px-3 py-1 rounded-full bg-primary/10 text-primary">Consistent</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    WHAT YOU GET
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Why Businesses Choose <span class="gradient-text">UdoXLaith</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Clear communication, predictable leads, and a partner that thinks like an operator – not just a marketer.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Ready-to-Talk Leads</h3>
+                            <p class="text-gray-400">
+                                We focus on people who are ready to speak, book, or request more information – not just anonymous clicks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Instant Notifications</h3>
+                            <p class="text-gray-400">
+                                Get notified as soon as a new lead comes in so your team can respond fast.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Simple Reporting</h3>
+                            <p class="text-gray-400">
+                                See exactly how many leads we’re sending and how your pipeline is growing – without complex dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Exclusive Leads</h3>
+                            <p class="text-gray-400">
+                                Our goal is to send leads to you – not sell the same person to 10 different companies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Operator Mindset</h3>
+                            <p class="text-gray-400">
+                                We think in jobs booked, consults scheduled, and clients retained – not just metrics on a spreadsheet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="gradient-box p-8 rounded-2xl feature-card">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Support & Strategy</h3>
+                            <p class="text-gray-400">
+                                You’re not left alone. We stay in touch, review performance, and adjust based on what you’re seeing on your end.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="btn-secondary px-8 py-4 rounded-full text-lg">
+                    See Everything That’s Included
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 bg-black/20 relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-black/30 border border-gray-800 text-primary font-medium mb-4 glow-box">
+                    CLEAR & STRAIGHTFORWARD
+                </span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Simple <span class="gradient-text">Engagement Options</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the option that matches where your business is right now. We can also customize if you need something different.
+            </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="gradient-box p-8 rounded-2xl pricing-card">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Starter</h3>
+                        <p class="text-gray-400 text-sm">For businesses testing a new lead channel</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-white">$0</span>
+                        <span class="text-gray-400">/month + per-lead</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Pay only for leads delivered</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Modest monthly lead volume</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Basic reporting</span>
+                        </li>
+                        <li class="flex items-center gap-2 opacity-50">
+                            <i class="fas fa-times text-gray-500"></i>
+                            <span class="text-gray-500">Priority strategy calls</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-secondary px-6 py-3 rounded-full">
+                        Start with Starter
+                    </button>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="gradient-box p-8 rounded-2xl pricing-card relative border-2 border-primary/30">
+                    <div class="absolute top-0 right-0 bg-primary text-black px-4 py-1 rounded-bl-lg rounded-tr-lg font-bold text-sm">
+                        MOST POPULAR
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Growth</h3>
+                        <p class="text-gray-400 text-sm">For businesses ready to scale lead flow</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-white">$1.5k</span>
+                        <span class="text-gray-400">/month + leads</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Higher, more consistent lead volume</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Priority support & check-ins</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Strategy reviews as you grow</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Flexible structure based on goals</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-primary px-6 py-3 rounded-full glow-box">
+                        Talk About Growth
+                    </button>
+                </div>
+                
+                <!-- Business Plan -->
+                <div class="gradient-box p-8 rounded-2xl pricing-card">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-1">Scale</h3>
+                        <p class="text-gray-400 text-sm">For teams that need aggressive volume</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold text-white">Custom</span>
+                        <span class="text-gray-400">/quote</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Custom lead targets</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Multi-location or multi-brand support</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Dedicated account attention</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-primary"></i>
+                            <span class="text-gray-300">Built around your targets</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-secondary px-6 py-3 rounded-full">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-black to-gray-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready for a <span class="gradient-text">Steady Flow of Leads</span>?
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                We’re a lead agency. You tell us who you want and how many you can handle. We focus on bringing those people to you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg">
+                    <i class="fas fa-bolt mr-2"></i>
+                    Book a Discovery Call
+                </button>
+                <button class="btn-secondary px-8 py-4 rounded-full text-lg">
+                    <i class="fas fa-comments mr-2"></i>
+                    Ask Us Your Questions
+                </button>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Business-owner friendly</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-lock"></i>
+                    <span>No complicated setup on your end</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Transparent communication</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/70 border-t border-gray-800 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="https://imagedelivery.net/LtCN8b7XAtToQgo5calb3g/5282c62f-e522-4507-9956-07b063b49201/website" alt="UdoXLaith Logo" class="h-10 mr-3">
+                        <span class="text-2xl font-bold gradient-text">UdoXLaith</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        A simple lead agency for businesses that want more customers without more complexity.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-300 hover:text-primary transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Platform</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-primary transition-colors">How It Works</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#stories" class="text-gray-400 hover:text-primary transition-colors">Client Stories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Lead Quality Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">
+                    © 2025 UdoXLaith. All rights reserved.
+                </p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="mt-6 text-center md:text-left text-xs text-gray-500">
+                <p>UdoXLaith is a lead agency that connects businesses with the customers they want.</p>
+                <p class="mt-1">You focus on running the business. We focus on filling the pipeline.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('block');
+            } else {
+                menu.classList.remove('block');
+                menu.classList.add('hidden');
+            }
+        });
+        // Typewriter effect
+        let i = 0;
+        const txt = 'More Qualified Leads';
+        const speed = 120;
+        
+        function typeWriter() {
+            if (i < txt.length) {
+                document.querySelector(".typewriter").textContent += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Start blinking cursor animation after typing completes
+                document.querySelector(".typewriter").classList.add("typing");
+            }
+        }
+        
+        // Start the typewriter effect after page loads
+        window.addEventListener('load', function() {
+            setTimeout(typeWriter, 1000);
+        });
+        // Sparkle effect
+        document.addEventListener('mousemove', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            document.body.appendChild(sparkle);
+            
+            // Animation
+            sparkle.animate([
+                { opacity: 1, transform: 'scale(1)' },
+                { opacity: 0, transform: 'scale(3)' }
+            ], {
+                duration: 1000,
+                easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                fill: 'forwards'
+            });
+            
+            // Remove after animation
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // Intersection Observer for animation triggers
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elements.forEach(element => {
+                element.style.animationPlayState = 'paused';
+                observer.observe(element);
+            });
+        }
+        
+        // Initialize animations on load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+    <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - <a href="https://enzostvs-deepsite.hf.space?remix=hamadali1/ax1" style="color: #fff;text-decoration: underline;" target="_blank" >🧬 Remix</a></p>
+</body>
+</html>
