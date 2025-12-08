@@ -6,22 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #0077ff;
-      --primary-dark: #005bcc;
-      --bg: #050816;
-      --bg-soft: #0b1020;
-      --card: #0f172a;
-      --text-main: #f9fafb;
-      --text-muted: #a1a1aa;
-      --border-subtle: #1f2937;
-      --accent-soft: rgba(56,189,248,0.12);
-      --radius-lg: 18px;
-      --radius-xl: 26px;
-      --shadow-soft: 0 18px 45px rgba(15,23,42,0.75);
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #22c55e;
+      --bg: #ffffff;
+      --bg-soft: #f9fafb;
+      --card: #ffffff;
+      --border-subtle: #e5e7eb;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 14px 30px rgba(15,23,42,0.08);
     }
 
     * {
@@ -32,9 +32,9 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #000 100%);
+      background: var(--bg);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     a {
@@ -42,31 +42,27 @@
       color: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout */
     .page {
-      max-width: 1120px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 20px 16px 60px;
+      padding: 20px 16px 48px;
     }
 
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 18px;
-      margin-bottom: 28px;
+      gap: 12px;
+      padding: 10px 16px;
+      margin-bottom: 24px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.92);
-      border: 1px solid rgba(148,163,184,0.22);
-      backdrop-filter: blur(18px);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
       position: sticky;
-      top: 12px;
-      z-index: 20;
+      top: 10px;
+      z-index: 10;
+      backdrop-filter: blur(10px);
     }
 
     .brand {
@@ -76,26 +72,20 @@
     }
 
     .brand-logo {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #38bdf8 0, #0ea5e9 40%, #0f172a 100%);
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      color: #e5f2ff;
-      box-shadow: 0 0 0 2px rgba(15,23,42,0.7);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
+      color: #eff6ff;
     }
 
     .brand-text span:first-child {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
     }
 
@@ -107,7 +97,7 @@
     .header-cta {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-size: 12px;
     }
 
@@ -115,161 +105,130 @@
       color: var(--text-muted);
     }
 
-    .pill {
-      padding: 7px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      background: radial-gradient(circle at top left, #0f172a 0, #020617 85%);
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #e5e7eb;
-    }
-
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 6px rgba(34,197,94,0.25);
-    }
-
     .btn-primary {
-      padding: 10px 16px;
+      padding: 8px 14px;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--primary), #22c55e);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 14px 30px rgba(37,99,235,0.6);
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+      gap: 6px;
+      box-shadow: 0 10px 24px rgba(37,99,235,0.35);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      filter: brightness(1.05);
-      box-shadow: 0 18px 40px rgba(37,99,235,0.8);
+      box-shadow: 0 14px 30px rgba(37,99,235,0.4);
     }
 
     .btn-outline {
-      padding: 10px 16px;
+      padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.45);
-      background: transparent;
-      color: #e5e7eb;
-      font-size: 13px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--text-main);
+      font-size: 12px;
       font-weight: 500;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-    }
-
-    .btn-outline:hover {
-      background: rgba(15,23,42,0.9);
-      border-color: rgba(148,163,184,0.8);
     }
 
     /* Hero */
     .hero {
-      margin-top: 26px;
+      margin-top: 24px;
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 24px;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 5px 10px;
+      gap: 6px;
+      padding: 4px 10px;
       border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-soft);
       font-size: 11px;
-      border: 1px solid rgba(148,163,184,0.3);
-      background: rgba(15,23,42,0.85);
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .eyebrow span.badge {
       padding: 3px 8px;
       border-radius: 999px;
-      background: rgba(34,197,94,0.15);
-      color: #bbf7d0;
-      font-size: 10px;
+      background: rgba(34,197,94,0.12);
+      color: #166534;
       font-weight: 600;
-      letter-spacing: 0.04em;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 10px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.2rem, 4vw, 2.9rem);
-      line-height: 1.18;
-      margin-bottom: 12px;
+    h1 {
+      font-size: clamp(2rem, 3.4vw, 2.6rem);
       letter-spacing: -0.03em;
+      margin-bottom: 8px;
     }
 
-    .hero h1 span.highlight {
-      background: linear-gradient(135deg, #38bdf8, #22c55e);
-      -webkit-background-clip: text;
-      color: transparent;
+    h1 span.highlight {
+      color: var(--primary);
     }
 
     .hero-subtitle {
       font-size: 14px;
       color: var(--text-muted);
-      max-width: 460px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+      max-width: 420px;
     }
 
     .hero-bullets {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px 14px;
-      margin-bottom: 20px;
-      font-size: 13px;
+      gap: 8px 12px;
+      font-size: 12px;
+      margin-bottom: 16px;
     }
 
     .hero-bullet {
       display: flex;
+      gap: 6px;
       align-items: flex-start;
-      gap: 8px;
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
     .hero-bullet-icon {
       width: 16px;
       height: 16px;
       border-radius: 999px;
-      background: rgba(34,197,94,0.18);
+      background: rgba(34,197,94,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 11px;
+      color: #16a34a;
     }
 
     .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 16px;
+      gap: 8px;
+      margin-bottom: 10px;
     }
 
     .hero-meta {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
       font-size: 11px;
       color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .hero-meta span {
@@ -282,92 +241,69 @@
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: #22c55e;
-    }
-
-    /* Hero Visual */
-    .hero-visual {
-      position: relative;
+      background: var(--accent);
     }
 
     .card-visual {
-      position: relative;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
+      background: var(--card);
       border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
-      padding: 18px 18px 20px;
-      border: 1px solid rgba(148,163,184,0.35);
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .glow-orbit {
-      position: absolute;
-      inset: -80px;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(56,189,248,0.18) 0, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(52,211,153,0.18) 0, transparent 50%),
-        radial-gradient(circle at 50% 100%, rgba(59,130,246,0.2) 0, transparent 55%);
-      opacity: 0.6;
-      pointer-events: none;
-      z-index: -1;
+      padding: 16px;
+      font-size: 12px;
     }
 
     .tank-metric {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .tank-metric h2 {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
     }
 
-    .tank-metric span {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .tank-graphic {
-      border-radius: 16px;
-      border: 1px solid rgba(148,163,184,0.4);
-      padding: 14px;
-      background: rgba(15,23,42,0.9);
-      margin-bottom: 16px;
-    }
-
-    .tank-row {
-      display: flex;
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-subtle);
+      font-size: 11px;
+      display: inline-flex;
       align-items: center;
-      gap: 16px;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .tank-box {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
     }
 
     .tank-shape {
-      width: 90px;
-      height: 90px;
-      border-radius: 18px;
-      background: radial-gradient(circle at 30% 0, #e0f2fe 0, #0ea5e9 35%, #0369a1 65%, #020617 100%);
+      width: 80px;
+      height: 80px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #eff6ff, #bfdbfe);
+      border: 1px solid #93c5fd;
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(191,219,254,0.7);
-      box-shadow: 0 14px 35px rgba(15,23,42,0.9);
     }
 
     .tank-water-level {
       position: absolute;
-      inset: 40% 0 0;
-      background: linear-gradient(to top, rgba(8,47,73,0.95), rgba(56,189,248,0.65));
-      box-shadow: 0 -8px 16px rgba(56,189,248,0.4);
-    }
-
-    .tank-grid {
-      position: absolute;
-      inset: 8px;
-      border-radius: 14px;
-      border: 2px solid rgba(15,23,42,0.9);
-      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.5);
+      inset: 45% 0 0;
+      background: linear-gradient(to top, #0ea5e9, #bae6fd);
     }
 
     .tank-details {
@@ -375,23 +311,17 @@
       color: var(--text-muted);
     }
 
-    .tank-details strong {
-      color: #e5e7eb;
-      font-size: 13px;
-    }
-
     .metrics-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 8px;
     }
 
     .metric {
-      border-radius: 12px;
-      padding: 9px 10px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.4);
+      background: var(--bg-soft);
+      border-radius: 10px;
+      padding: 8px;
+      border: 1px solid var(--border-subtle);
       font-size: 11px;
     }
 
@@ -406,21 +336,9 @@
       font-size: 13px;
     }
 
-    .stripe {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #a5b4fc;
-      border-top: 1px dashed rgba(148,163,184,0.5);
-      padding-top: 7px;
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
     /* Sections */
     section {
-      margin-top: 46px;
+      margin-top: 40px;
     }
 
     .section-header {
@@ -428,7 +346,7 @@
       justify-content: space-between;
       gap: 16px;
       align-items: flex-end;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .section-header h2 {
@@ -439,23 +357,22 @@
     .section-header p {
       font-size: 13px;
       color: var(--text-muted);
-      max-width: 360px;
     }
 
     /* Services */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
     .card {
-      background: var(--bg-soft);
+      background: var(--card);
       border-radius: var(--radius-lg);
-      padding: 16px 14px;
+      padding: 14px;
       border: 1px solid var(--border-subtle);
-      box-shadow: 0 8px 26px rgba(15,23,42,0.8);
-      font-size: 13px;
+      box-shadow: var(--shadow-soft);
+      font-size: 12px;
     }
 
     .card h3 {
@@ -465,40 +382,38 @@
 
     .card p {
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      font-size: 11px;
     }
 
     .chip {
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.35);
-      color: #e5e7eb;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-soft);
+      font-size: 11px;
+      color: var(--text-muted);
     }
 
     /* Pricing */
     .pricing {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 16px;
     }
 
     .pricing-card-main {
-      background: radial-gradient(circle at top left, #1d283a 0, #020617 70%);
+      background: var(--card);
       border-radius: var(--radius-xl);
-      padding: 20px 18px;
-      border: 1px solid rgba(129,140,248,0.6);
+      border: 1px solid #bfdbfe;
       box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
+      padding: 16px;
+      font-size: 13px;
     }
 
     .pricing-pill {
@@ -508,49 +423,40 @@
       gap: 6px;
       padding: 4px 9px;
       border-radius: 999px;
-      background: rgba(37,99,235,0.12);
-      border: 1px solid rgba(96,165,250,0.6);
-      color: #bfdbfe;
-      margin-bottom: 10px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      margin-bottom: 8px;
     }
 
     .price {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 700;
       margin-bottom: 4px;
     }
 
     .price span {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       color: var(--text-muted);
     }
 
-    .price-notes {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
     .pricing-list {
       list-style: none;
-      font-size: 13px;
-      color: #e5e7eb;
-      margin-bottom: 14px;
+      margin: 10px 0 12px;
+      font-size: 12px;
     }
 
     .pricing-list li {
       display: flex;
-      align-items: flex-start;
-      gap: 7px;
-      margin-bottom: 7px;
+      gap: 6px;
+      margin-bottom: 6px;
     }
 
     .pricing-list li::before {
-      content: "✓";
-      font-size: 11px;
-      margin-top: 2px;
-      color: #4ade80;
+      content: "•";
+      color: var(--primary);
+      margin-top: 1px;
     }
 
     .pricing-note-soft {
@@ -561,46 +467,41 @@
     .table-simple {
       width: 100%;
       border-collapse: collapse;
-      font-size: 12px;
-      margin-top: 10px;
+      font-size: 11px;
+      margin-top: 6px;
     }
 
     .table-simple th,
     .table-simple td {
-      padding: 7px 6px;
-      border-bottom: 1px solid rgba(30,64,175,0.6);
+      padding: 6px;
+      border-bottom: 1px solid var(--border-subtle);
       text-align: left;
     }
 
     .table-simple th {
-      font-weight: 500;
-      color: #c7d2fe;
-      background: rgba(15,23,42,0.9);
-    }
-
-    .table-simple tr:last-child td {
-      border-bottom: none;
+      font-weight: 600;
+      background: var(--bg-soft);
     }
 
     /* Contact */
     .contact-card {
-      background: var(--bg-soft);
+      background: var(--card);
       border-radius: var(--radius-xl);
-      padding: 18px 16px;
       border: 1px solid var(--border-subtle);
-      box-shadow: 0 10px 32px rgba(15,23,42,0.85);
+      box-shadow: var(--shadow-soft);
+      padding: 16px;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: start;
+      gap: 16px;
     }
 
     form {
       display: grid;
-      gap: 10px;
+      gap: 8px;
+      font-size: 12px;
     }
 
     label {
@@ -614,12 +515,12 @@
     select,
     textarea {
       width: 100%;
-      padding: 9px 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(55,65,81,0.8);
-      background: rgba(15,23,42,0.9);
-      color: #e5e7eb;
-      font-size: 13px;
+      padding: 8px 9px;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-soft);
+      font-size: 12px;
+      color: var(--text-main);
       outline: none;
       transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
     }
@@ -627,70 +528,60 @@
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 1px rgba(59,130,246,0.5);
-      background: rgba(15,23,42,0.98);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.25);
+      background: #ffffff;
     }
 
     textarea {
-      min-height: 80px;
+      min-height: 70px;
       resize: vertical;
     }
 
     .contact-info {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-muted);
     }
 
     .contact-info strong {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
     .contact-info-row {
+      margin: 6px 0 10px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-top: 8px;
-      margin-bottom: 10px;
+      gap: 4px;
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(15,23,42,0.9);
+      margin-top: 32px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     /* Responsive */
     @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .hero,
       .pricing,
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      header {
-        border-radius: 18px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .hero {
-        margin-top: 20px;
-      }
     }
 
     @media (max-width: 720px) {
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
+      .grid-3,
       .hero-bullets {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -710,17 +601,16 @@
       <div class="brand-logo">H2</div>
       <div class="brand-text">
         <span>North Texas Water Rentals</span>
-        <span>On-demand 330-gallon tank rentals</span>
+        <span>330-gallon tank rentals</span>
       </div>
     </div>
     <div class="header-cta">
-      <span>Call now:</span>
+      <span>Call:</span>
       <button class="btn-outline" onclick="window.location.href='tel:+19720000000'">
         (972) 000-0000
       </button>
       <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-        Get a quote
-        <span>→</span>
+        Get quote →
       </button>
     </div>
   </header>
@@ -730,44 +620,40 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">
-          <span class="badge">Now serving DFW</span>
-          <span>Same-day drop-off available on most orders</span>
+          <span class="badge">DFW</span>
+          <span>Same-day drop-off when available</span>
         </div>
 
         <h1>
-          330-Gallon
-          <span class="highlight">water tank rentals</span><br />
-          delivered to your job site.
+          330-gallon <span class="highlight">water tank rentals</span> delivered to you.
         </h1>
 
         <p class="hero-subtitle">
-          Clean, reliable IBC tote rentals for construction, landscaping, events and emergency water.
-          We deliver, place, and pick up — you only pay for the time you use it.
+          Simple rentals for construction, landscaping and events. We deliver, you use it, we pick it up.
         </p>
 
         <div class="hero-bullets">
           <div class="hero-bullet">
             <div class="hero-bullet-icon">✓</div>
-            <div>330-gallon IBC tanks with steel pallet base.</div>
+            <div>Clean 330-gallon IBC totes with steel pallet.</div>
           </div>
           <div class="hero-bullet">
             <div class="hero-bullet-icon">✓</div>
-            <div>Flexible terms — daily, weekly or monthly rentals.</div>
+            <div>Daily, weekly or monthly options.</div>
           </div>
           <div class="hero-bullet">
             <div class="hero-bullet-icon">✓</div>
-            <div>Delivery, set-up and pick-up included in every quote.</div>
+            <div>Delivery and pickup included in your quote.</div>
           </div>
           <div class="hero-bullet">
             <div class="hero-bullet-icon">✓</div>
-            <div>Perfect for construction sites, pressure washing, dust control & more.</div>
+            <div>DFW and nearby North Texas areas.</div>
           </div>
         </div>
 
         <div class="hero-cta-row">
           <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            Request a quote
-            <span>→</span>
+            Request a quote →
           </button>
           <button class="btn-outline" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
             View pricing
@@ -775,37 +661,30 @@
         </div>
 
         <div class="hero-meta">
-          <span><span class="dot-small"></span> Locally operated in DFW</span>
-          <span>Licensed & insured</span>
-          <span>Volume discounts for multiple tanks</span>
+          <span><span class="dot-small"></span> Local, small business</span>
+          <span>Quick text & phone support</span>
         </div>
       </div>
 
       <div class="hero-visual">
         <div class="card-visual">
-          <div class="glow-orbit"></div>
           <div class="tank-metric">
             <div>
-              <h2>IBC Tank with Steel Pallet · 330 gal</h2>
-              <span>Typical rental configuration</span>
+              <h2>IBC Tank · 330 gal</h2>
+              <span style="color: var(--text-muted); font-size: 11px;">Standard rental tank</span>
             </div>
             <div class="pill">
               <span class="pill-dot"></span>
-              <span>Availability: In stock</span>
+              <span>In stock</span>
             </div>
           </div>
 
-          <div class="tank-graphic">
-            <div class="tank-row">
-              <div class="tank-shape">
-                <div class="tank-water-level"></div>
-                <div class="tank-grid"></div>
-              </div>
-              <div class="tank-details">
-                <strong>Rugged water storage on-site</strong><br />
-                330 gallons of capacity with heavy-duty steel cage and pallet base.
-                Easily moved with forklift or pallet jack.
-              </div>
+          <div class="tank-box">
+            <div class="tank-shape">
+              <div class="tank-water-level"></div>
+            </div>
+            <div class="tank-details">
+              Rugged 330-gallon IBC tank with steel pallet base. Easy to move with a forklift or pallet jack.
             </div>
           </div>
 
@@ -813,23 +692,15 @@
             <div class="metric">
               <span class="label">Capacity</span>
               <span class="value">330 gal</span>
-              <span class="label">≈ 1,249 L</span>
             </div>
             <div class="metric">
-              <span class="label">Daily rental from</span>
-              <span class="value">$XX/day</span>
-              <span class="label">Ask about weekly rates</span>
+              <span class="label">From</span>
+              <span class="value">$XX / day</span>
             </div>
             <div class="metric">
-              <span class="label">Service radius</span>
-              <span class="value">50+ mi</span>
-              <span class="label">Based in Dallas–Fort Worth</span>
+              <span class="label">Area</span>
+              <span class="value">DFW</span>
             </div>
-          </div>
-
-          <div class="stripe">
-            <span>Construction · Events · Landscaping · Emergency</span>
-            <span>Delivery · Setup · Pickup included</span>
           </div>
         </div>
       </div>
@@ -840,47 +711,38 @@
       <div class="section-header">
         <div>
           <h2>Who we serve</h2>
-          <p>Whether you need short-term water storage or ongoing supply, we make it simple to get reliable tanks on-site.</p>
+          <p>Short-term or ongoing use — we keep it simple.</p>
         </div>
       </div>
 
       <div class="grid-3">
         <div class="card">
-          <h3>Construction & Trades</h3>
-          <p>
-            Water on-site for concrete work, cleaning, pressure washing and dust control.
-            Flexible rental terms for fast-moving projects.
-          </p>
+          <h3>Construction</h3>
+          <p>Water on-site for jobs where you can’t tap into city lines.</p>
           <div class="chip-row">
-            <span class="chip">General contractors</span>
-            <span class="chip">Concrete crews</span>
-            <span class="chip">Pressure washing</span>
+            <span class="chip">Concrete</span>
+            <span class="chip">Cleaning</span>
+            <span class="chip">Dust control</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Events & Temporary Sites</h3>
-          <p>
-            Ideal for outdoor events, festivals, temporary facilities and remote locations
-            where city water isn’t available.
-          </p>
+          <h3>Events</h3>
+          <p>Outdoor events and temporary setups needing basic water storage.</p>
           <div class="chip-row">
-            <span class="chip">Outdoor events</span>
-            <span class="chip">Pop-up venues</span>
-            <span class="chip">Remote staging</span>
+            <span class="chip">Festivals</span>
+            <span class="chip">Pop-ups</span>
+            <span class="chip">Remote sites</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Landscaping & Agriculture</h3>
-          <p>
-            Supplemental water storage for landscaping projects, tree watering, small ag
-            applications and more.
-          </p>
+          <h3>Landscaping</h3>
+          <p>Extra water for landscaping projects or light ag use.</p>
           <div class="chip-row">
-            <span class="chip">Irrigation support</span>
+            <span class="chip">Irrigation</span>
             <span class="chip">Tree watering</span>
-            <span class="chip">Small-scale ag</span>
+            <span class="chip">Small ag</span>
           </div>
         </div>
       </div>
@@ -890,73 +752,62 @@
     <section id="pricing">
       <div class="section-header">
         <div>
-          <h2>Simple, transparent pricing</h2>
-          <p>No surprise fees. Every quote includes delivery, setup and pickup within our normal service area.</p>
+          <h2>Simple pricing</h2>
+          <p>All quotes include delivery and pickup.</p>
         </div>
       </div>
 
       <div class="pricing">
         <div class="pricing-card-main">
           <div class="pricing-pill">
-            <span>Most popular</span>
-            <span>• 330-gallon IBC tank</span>
+            <span>330-gallon tank</span>
           </div>
 
           <div class="price">
-            $XX / day <span>· discounts for weekly & monthly rentals</span>
-          </div>
-          <div class="price-notes">
-            Final quote depends on distance, number of tanks, and rental length. Contact us for exact pricing in minutes.
+            $XX / day <span> · discounts for week & month</span>
           </div>
 
           <ul class="pricing-list">
-            <li>330-gallon IBC tank with steel pallet base</li>
-            <li>Delivery and pickup within standard service radius</li>
-            <li>Assistance with placement on-site</li>
-            <li>Multiple tank discounts for larger projects</li>
+            <li>330-gallon IBC tank with steel pallet.</li>
+            <li>Delivery and pickup inside service area.</li>
+            <li>Help with basic placement on-site.</li>
           </ul>
 
           <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            Lock in a quote
-            <span>→</span>
+            Get exact price →
           </button>
 
-          <p class="pricing-note-soft" style="margin-top: 10px;">
-            Need ongoing refills or multiple sites? Let us know in the form below and we’ll build a custom package for you.
+          <p class="pricing-note-soft" style="margin-top: 8px;">
+            Final price depends on distance, number of tanks and rental length.
           </p>
         </div>
 
         <div class="card">
-          <h3>Sample rate card</h3>
-          <p>Use this as a ballpark reference — we’ll confirm actual rates when you request a quote.</p>
+          <h3>Typical ranges</h3>
           <table class="table-simple">
             <thead>
             <tr>
               <th>Term</th>
-              <th>Est. rate*</th>
-              <th>Best for</th>
+              <th>Range*</th>
             </tr>
             </thead>
             <tbody>
             <tr>
               <td>Daily</td>
-              <td>$XX–$XX / day</td>
-              <td>Short projects, one-off jobs</td>
+              <td>$XX – $XX</td>
             </tr>
             <tr>
               <td>Weekly</td>
-              <td>$XX–$XX / week</td>
-              <td>Construction, landscaping, events</td>
+              <td>$XX – $XX</td>
             </tr>
             <tr>
               <td>Monthly</td>
-              <td>$XX–$XX / month</td>
-              <td>Ongoing or long-term sites</td>
+              <td>$XX – $XX</td>
             </tr>
             </tbody>
           </table>
-          <p class="pricing-note-soft" style="margin-top: 8px;">
-            *These are example ranges. Pricing may vary based on location, access, and total volume needed.
+          <p class="pricing-note-soft" style="margin-top: 6px;">
+            *For quick reference only. We’ll send you a firm quote before you book.
           </p>
         </div>
       </div>
@@ -967,7 +818,7 @@
       <div class="section-header">
         <div>
           <h2>Request a quote</h2>
-          <p>Tell us a little about your project and we’ll respond with pricing and availability.</p>
+          <p>Send a quick request and we’ll reply with pricing and availability.</p>
         </div>
       </div>
 
@@ -979,23 +830,15 @@
               <input type="text" id="name" name="name" placeholder="John Smith" required>
             </div>
             <div>
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Company / organization">
-            </div>
-            <div>
               <label for="phone">Phone*</label>
               <input type="tel" id="phone" name="phone" placeholder="(###) ###-####" required>
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com">
             </div>
             <div>
               <label for="location">Job site city*</label>
               <input type="text" id="location" name="location" placeholder="Dallas, Fort Worth, etc." required>
             </div>
             <div>
-              <label for="tanks">Number of tanks needed*</label>
+              <label for="tanks">Number of tanks*</label>
               <select id="tanks" name="tanks" required>
                 <option value="">Select</option>
                 <option value="1">1 tank</option>
@@ -1005,7 +848,7 @@
               </select>
             </div>
             <div>
-              <label for="duration">Estimated rental duration*</label>
+              <label for="duration">How long?*</label>
               <select id="duration" name="duration" required>
                 <option value="">Select</option>
                 <option value="1-3 days">1–3 days</option>
@@ -1016,31 +859,25 @@
               </select>
             </div>
             <div>
-              <label for="details">Project details</label>
-              <textarea id="details" name="details" placeholder="Tell us what you need water for, start date, access notes, etc."></textarea>
+              <label for="details">Notes</label>
+              <textarea id="details" name="details" placeholder="Start date, access notes, refill needs, etc."></textarea>
             </div>
             <div>
               <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-                Submit request
+                Send request
               </button>
             </div>
           </form>
 
           <div class="contact-info">
-            <strong>Prefer to talk?</strong>
+            <strong>Prefer to call or text?</strong>
             <div class="contact-info-row">
-              <span>Call or text: <a href="tel:+19720000000">(972) 000-0000</a></span>
+              <span>Phone / text: <a href="tel:+19720000000">(972) 000-0000</a></span>
               <span>Email: <a href="mailto:info@ntxwaterrentals.com">info@ntxwaterrentals.com</a></span>
             </div>
 
             <p>
-              Typical response time: <strong>under 1 hour</strong> during business days.
-              After-hours requests will be answered the next morning.
-            </p>
-
-            <p style="margin-top: 10px;">
-              Service area: Dallas, Fort Worth, Arlington, Plano, Denton and surrounding North Texas cities.
-              Have a project outside this area? Reach out and we’ll see what we can do.
+              We usually reply within a few hours during the day. After-hours messages are answered the next morning.
             </p>
           </div>
         </div>
@@ -1050,13 +887,12 @@
 
   <!-- Footer -->
   <footer>
-    <span>© <span id="year"></span> North Texas Water Rentals. All rights reserved.</span>
-    <span>Clean, reliable 330-gallon water tank rentals across DFW.</span>
+    <span>© <span id="year"></span> North Texas Water Rentals.</span>
+    <span>330-gallon water tank rentals in DFW.</span>
   </footer>
 </div>
 
 <script>
-  // Set current year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
