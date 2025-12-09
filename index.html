@@ -535,8 +535,6 @@
         .cta-section h2 {
             font-size: 2.1rem;
             margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
         }
         
         .cta-section p {
@@ -544,15 +542,11 @@
             margin: 0 auto 1.8rem;
             font-size: 1rem;
             line-height: 1.6;
-            position: relative;
-            z-index: 1;
         }
         
         .cta-section .cta-btn {
             background: white;
             color: var(--primary);
-            position: relative;
-            z-index: 1;
         }
         
         /* Contact / Footer */
@@ -644,6 +638,98 @@
             border-top: 1px solid rgba(148, 163, 184, 0.35);
             color: #9ca3af;
             font-size: 0.85rem;
+        }
+
+        /* Hero Form */
+        .hero-form {
+            margin-top: 1.8rem;
+            background: white;
+            padding: 1.5rem 1.6rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+            max-width: 520px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .hero-form h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .hero-form p.form-note {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.45rem;
+        }
+
+        .hero-form .form-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-form .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-form label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #4b5563;
+        }
+
+        .hero-form input,
+        .hero-form textarea {
+            padding: 0.55rem 0.7rem;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-form input:focus,
+        .hero-form textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+        }
+
+        .hero-form textarea {
+            min-height: 70px;
+            resize: vertical;
+        }
+
+        .hero-form .form-submit-btn {
+            width: 100%;
+            margin-top: 0.5rem;
+            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .form-status {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        .form-status.success {
+            color: #15803d;
+        }
+
+        .form-status.error {
+            color: #b91c1c;
+        }
+
+        /* Stack fields on small screens */
+        @media (max-width: 768px) {
+            .hero-form .form-row {
+                flex-direction: column;
+            }
         }
         
         /* Responsive */
@@ -783,9 +869,56 @@
                 <span class="hero-pill">Local, small business</span>
             </div>
 
-            <div class="btn-group">
-                <button class="cta-btn" onclick="window.open('https://calendly.com/utglabs/book-call', '_blank')">
-                Request a quote
+            <!-- New Hero Form -->
+            <div class="hero-form">
+                <h3>Get a fast quote</h3>
+                <form id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name*</label>
+                            <input id="name" name="name" type="text" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email (optional)</label>
+                            <input id="email" name="email" type="email" placeholder="you@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Job site city*</label>
+                            <input id="city" name="city" type="text" placeholder="Dallas, Fort Worth, Denton..." required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dates">Approx. dates</label>
+                        <input id="dates" name="dates" type="text" placeholder="Ex: Jan 10–14 or Month of March">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Job details</label>
+                        <textarea id="details" name="details" placeholder="How many tanks? Access notes, water source, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-btn form-submit-btn">
+                        Get my quote
+                    </button>
+                    <p class="form-note">
+                        We’ll text or email you back with pricing and availability.
+                    </p>
+                    <div id="formStatus" class="form-status" aria-live="polite"></div>
+                </form>
+            </div>
+
+            <!-- Optional: buttons under form -->
+            <div class="btn-group" style="margin-top:1.25rem;">
+                <button class="secondary-btn" onclick="window.open('https://calendly.com/utglabs/book-call', '_blank')">
+                    Book a quick call
                 </button>
                 <button class="secondary-btn" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
                     View pricing
@@ -1102,18 +1235,64 @@
             });
         });
 
+        // Quote form → webhook
+        const quoteForm = document.getElementById('quoteForm');
+        const formStatus = document.getElementById('formStatus');
+
+        // Webhook URL
+        const WEBHOOK_URL = 'https://hook.us1.make.com/xxxxxxxxxxxxxxxxxxxxxx';
+
+        if (quoteForm && WEBHOOK_URL) {
+            quoteForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                formStatus.textContent = 'Sending...';
+                formStatus.className = 'form-status';
+
+                const formData = {
+                    name: quoteForm.name.value.trim(),
+                    phone: quoteForm.phone.value.trim(),
+                    email: quoteForm.email.value.trim(),
+                    city: quoteForm.city.value.trim(),
+                    dates: quoteForm.dates.value.trim(),
+                    details: quoteForm.details.value.trim(),
+                    source: 'North Texas Water Rentals - Hero Form',
+                    submittedAt: new Date().toISOString()
+                };
+
+                try {
+                    const res = await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (!res.ok) throw new Error('Network response was not ok');
+
+                    formStatus.textContent = 'Got it! We’ll follow up with a quote shortly.';
+                    formStatus.classList.add('success');
+                    quoteForm.reset();
+                } catch (error) {
+                    console.error(error);
+                    formStatus.textContent = 'Something went wrong. You can also call or text (972) 000-0000.';
+                    formStatus.classList.add('error');
+                }
+            });
+        }
+
         // Set year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16515358900"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16515358900');
+    </script>
 </body>
 </html>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16515358900"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16515358900');
-</script>
